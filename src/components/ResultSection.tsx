@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Download, RotateCcw, Share2, Clock, CheckCircle, Eye } from 'lucide-react';
+import { Download, RotateCcw, Share2, Clock, CheckCircle, Eye, Palette } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
 interface ResultSectionProps {
@@ -11,13 +11,15 @@ interface ResultSectionProps {
   finalImage: string | null;
   processingTime: number | null;
   onStartOver: () => void;
+  onTryDifferentStyle: () => void;
 }
 
 export const ResultSection = ({
   originalImage,
   finalImage,
   processingTime,
-  onStartOver
+  onStartOver,
+  onTryDifferentStyle
 }: ResultSectionProps) => {
   const [comparisonMode, setComparisonMode] = useState<'side-by-side' | 'overlay'>('side-by-side');
   const [overlayPosition, setOverlayPosition] = useState(50);
@@ -148,22 +150,32 @@ export const ResultSection = ({
         </CardContent>
       </Card>
 
-      {/* Action Buttons */}
+      {/* Action Buttons with improved contrast and new button */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button
           onClick={handleDownload}
           size="lg"
-          className="bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700 text-white px-8"
+          className="bg-gradient-to-r from-teal-700 to-purple-700 hover:from-teal-800 hover:to-purple-800 text-white px-8"
         >
           <Download className="h-5 w-5 mr-2" />
           Download Artwork
         </Button>
         
         <Button
+          onClick={onTryDifferentStyle}
+          variant="outline"
+          size="lg"
+          className="border-purple-600 text-slate-800 bg-purple-50 hover:bg-purple-100 hover:text-slate-900 px-8"
+        >
+          <Palette className="h-5 w-5 mr-2" />
+          Try Different Style
+        </Button>
+        
+        <Button
           onClick={handleShare}
           variant="outline"
           size="lg"
-          className="border-purple-300 text-purple-700 hover:bg-purple-50 px-8"
+          className="border-teal-600 text-slate-800 bg-teal-50 hover:bg-teal-100 hover:text-slate-900 px-8"
         >
           <Share2 className="h-5 w-5 mr-2" />
           Share
@@ -173,10 +185,10 @@ export const ResultSection = ({
           onClick={onStartOver}
           variant="outline"
           size="lg"
-          className="border-slate-300 text-slate-700 hover:bg-slate-50 px-8"
+          className="border-slate-400 text-slate-800 bg-slate-50 hover:bg-slate-100 hover:text-slate-900 px-8"
         >
           <RotateCcw className="h-5 w-5 mr-2" />
-          Create Another
+          Start Over
         </Button>
       </div>
     </div>

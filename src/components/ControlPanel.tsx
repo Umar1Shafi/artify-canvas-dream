@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
@@ -87,20 +86,21 @@ export const ControlPanel = ({
       </CardHeader>
       <CardContent>
         <div className="space-y-6">
-          {/* Style Strength Control */}
+          {/* Style Strength Control with enhanced tooltip */}
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <label className="text-sm font-medium">Style Strength</label>
+                <label className="text-sm font-medium">α:β Balance (Content vs Style)</label>
                 <TooltipProvider>
                   <Tooltip>
                     <TooltipTrigger>
-                      <Info className="h-4 w-4 text-slate-400" />
+                      <Info className="h-4 w-4 text-slate-400 hover:text-slate-600 transition-colors" />
                     </TooltipTrigger>
                     <TooltipContent>
                       <p className="max-w-xs">
-                        Controls the balance between preserving your original photo and applying the artistic style. 
-                        Lower values keep more of your original photo.
+                        <strong>α:β Balance</strong> controls the ratio between your original photo (α) and the artistic style (β). 
+                        Lower values preserve more of your original photo's content and structure. 
+                        Higher values apply more of the artistic style's colors, textures, and brush strokes.
                       </p>
                     </TooltipContent>
                   </Tooltip>
@@ -119,9 +119,9 @@ export const ControlPanel = ({
               className="w-full"
             />
             <div className="flex justify-between text-xs text-slate-500">
-              <span>More Original</span>
+              <span>More Original (α)</span>
               <span>Balanced</span>
-              <span>More Artistic</span>
+              <span>More Artistic (β)</span>
             </div>
           </div>
 
@@ -200,13 +200,13 @@ export const ControlPanel = ({
             </Tabs>
           </div>
 
-          {/* Action Buttons */}
+          {/* Action Buttons with improved contrast */}
           <div className="flex flex-col sm:flex-row gap-3">
             <Button
               onClick={handleQuickPreview}
               disabled={isProcessing}
               variant="outline"
-              className="flex-1 border-teal-300 text-teal-700 hover:bg-teal-50"
+              className="flex-1 border-teal-600 text-slate-800 bg-teal-50 hover:bg-teal-100 hover:text-slate-900"
             >
               {isProcessing && viewMode === 'output' ? (
                 <>
@@ -224,7 +224,7 @@ export const ControlPanel = ({
             <Button
               onClick={handleFullResolution}
               disabled={isProcessing}
-              className="flex-1 bg-gradient-to-r from-teal-600 to-purple-600 hover:from-teal-700 hover:to-purple-700"
+              className="flex-1 bg-gradient-to-r from-teal-700 to-purple-700 hover:from-teal-800 hover:to-purple-800 text-white"
             >
               {isProcessing && viewMode !== 'output' ? (
                 <>
