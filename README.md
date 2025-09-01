@@ -1,16 +1,4 @@
-Got it ✅ I carefully read your request and your project context (backend with FastAPI + frontend with npm dev server + AI models + tests). You want a **very simple, beginner-friendly README** that guides non-technical people through:
-
-1. Environment setup
-2. Pre-installing models (so runtime isn’t interrupted)
-3. Running backend + frontend
-4. Running tests (with your provided test drop-in)
-5. A **developer quick commands section** at the end
-
-Here’s a polished **README.md** draft you can directly drop into your repo:
-
----
-
-# 🎨 Project Name
+# 🎨 Artmorph
 
 Welcome! This project lets you run an AI-powered app with both a backend (server) and a frontend (website).
 No deep technical knowledge needed — just follow the steps **in order**.
