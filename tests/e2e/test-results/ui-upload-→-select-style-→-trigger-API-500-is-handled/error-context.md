@@ -1,0 +1,79 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - img [ref=e10]
+          - generic [ref=e16]:
+            - heading "ArtMorph" [level=1] [ref=e17]
+            - paragraph [ref=e18]: AI-Powered Style Transfer
+        - generic [ref=e19]:
+          - generic [ref=e21]:
+            - generic [ref=e22]: "1"
+            - generic [ref=e23]: Upload & Style
+          - generic [ref=e26]:
+            - generic [ref=e27]: "2"
+            - generic [ref=e28]: Stylize
+          - generic [ref=e31]:
+            - generic [ref=e32]: "3"
+            - generic [ref=e33]: Download
+      - generic [ref=e34]:
+        - button "How it works" [ref=e35] [cursor=pointer]:
+          - img
+          - text: How it works
+        - generic [ref=e36]:
+          - img [ref=e37]
+          - generic [ref=e39]: Professional AI Art Tool
+  - generic [ref=e40]:
+    - heading "Transform Your Photos" [level=1] [ref=e41]
+    - paragraph [ref=e42]: Upload your photo and choose an artistic style to create stunning artwork in seconds
+  - main [ref=e43]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]: Upload Your Photo
+        - generic [ref=e49]:
+          - img [ref=e50]
+          - generic [ref=e51] [cursor=pointer]: Change
+      - generic [ref=e52]: Photo uploaded! Ready to apply artistic style.
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - heading "Choose Artistic Style" [level=3] [ref=e58]:
+          - img [ref=e59]
+          - generic [ref=e65]: Choose Artistic Style
+          - button [ref=e66] [cursor=pointer]:
+            - img [ref=e67] [cursor=pointer]
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - button "Cinematic Cinematic Bold, filmic grading" [ref=e71] [cursor=pointer]:
+              - img "Cinematic" [ref=e72] [cursor=pointer]
+              - generic [ref=e74] [cursor=pointer]:
+                - heading "Cinematic" [level=4] [ref=e75] [cursor=pointer]
+                - paragraph [ref=e76] [cursor=pointer]: Bold, filmic grading
+            - button "Cyberpunk Cyberpunk Neon, futuristic vibe" [ref=e78] [cursor=pointer]:
+              - img "Cyberpunk" [ref=e79] [cursor=pointer]
+              - generic [ref=e81] [cursor=pointer]:
+                - heading "Cyberpunk" [level=4] [ref=e82] [cursor=pointer]
+                - paragraph [ref=e83] [cursor=pointer]: Neon, futuristic vibe
+            - button "Anime Anime Clean, illustrative lines" [ref=e84] [cursor=pointer]:
+              - img "Anime" [ref=e85] [cursor=pointer]
+              - generic [ref=e87] [cursor=pointer]:
+                - heading "Anime" [level=4] [ref=e88] [cursor=pointer]
+                - paragraph [ref=e89] [cursor=pointer]: Clean, illustrative lines
+            - button "Noir Noir Moody B/W contrast" [ref=e90] [cursor=pointer]:
+              - img "Noir" [ref=e91] [cursor=pointer]
+              - generic [ref=e93] [cursor=pointer]:
+                - heading "Noir" [level=4] [ref=e94] [cursor=pointer]
+                - paragraph [ref=e95] [cursor=pointer]: Moody B/W contrast
+          - generic [ref=e96]:
+            - paragraph [ref=e97]:
+              - strong [ref=e98]: "Selected:"
+              - text: Cinematic
+            - paragraph [ref=e99]: Rich contrast and dramatic tones for a movie-like finish.
+      - generic [ref=e100]:
+        - text: "Selected style:"
+        - generic [ref=e101]: cinematic
+  - button "Start Stylization →" [ref=e103] [cursor=pointer]
+```

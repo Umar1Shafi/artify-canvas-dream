@@ -1,0 +1,80 @@
+/* src/styles/pro.css  — minimal, safe, no Tailwind config changes needed */
+:root {
+    --bg-1: 255, 255, 255;
+    /* white */
+    --ink-1: 16, 24, 39;
+    /* slate-ish */
+    --brand-1: 88, 28, 135;
+    /* purple */
+    --brand-2: 20, 184, 166;
+    /* teal */
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    background:
+        radial-gradient(1200px 800px at 15% -10%, rgba(var(--brand-2), 0.15), transparent 50%),
+        radial-gradient(1000px 700px at 100% 0%, rgba(var(--brand-1), 0.18), transparent 55%),
+        linear-gradient(180deg, #0b1020 0%, #0d1224 40%, #0e1328 100%);
+    /* deep backdrop */
+    color: rgb(var(--bg-1));
+}
+
+.pro-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 20px 60px;
+}
+
+.pro-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.pro-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    backdrop-filter: blur(8px);
+    background: linear-gradient(180deg, rgba(14, 19, 40, 0.85), rgba(14, 19, 40, 0.55));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, rgb(var(--brand-2)) 0%, rgb(99, 102, 241) 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    opacity: 0.95;
+}
+
+.btn-ghost {
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 26px;
+    padding: 0 10px;
+    font-size: 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.06);
+}
