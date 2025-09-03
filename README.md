@@ -11,7 +11,7 @@ You only need to do this once.
 
 ### What you need
 
-* **Python 3.10+**
+* **Python 3.10**
 * **Node.js 18+**
 * Internet connection (to fetch dependencies & models)
 
