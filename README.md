@@ -54,7 +54,7 @@ npm install
 To avoid delays when first running, **download the models now**.
 
 ```bash
-python dev/download_models.py
+python dev/download_all.py
 ```
 
 *(This script will fetch all required AI weights into the `models/` folder. Only needed once.)*
