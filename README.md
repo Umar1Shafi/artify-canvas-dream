@@ -158,7 +158,7 @@ All important commands in one place:
 python -m venv .venv && .\.venv\Scripts\Activate   # (Windows)
 pip install -r requirements.txt
 npm install
-python scripts/download_models.py
+python dev/download_all.py
 
 # Run backend
 uvicorn backend.server:app --host 127.0.0.1 --port 8000 --reload
