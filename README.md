@@ -1,6 +1,42 @@
 # 🎨 Artmorph
 
 Welcome! This project lets you run an AI-powered app with both a backend (server) and a frontend (website).
+
+## Research & Engineering Overview
+
+Artmorph is a hybrid generative image stylization system that combines
+perceptual optimization (Neural Style Transfer) with diffusion-based
+sampling to address stability, color drift, and convergence issues
+observed in classical NST pipelines.
+
+The project was motivated by three recurring problems:
+1. Instability of Gram-matrix loss across deep feature layers
+2. Unpredictable color drift in stylized outputs
+3. Long optimization times with limited controllability
+
+To address these, the system integrates:
+- Perceptual style loss as a deterministic anchor
+- Diffusion sampling with classifier-free guidance (CFG)
+- PCA-based color alignment to stabilize chromatic components
+
+## Experimental Notes
+
+Experiments were conducted by varying:
+- VGG layer depth used for Gram-matrix computation
+- CFG values during diffusion sampling
+- PCA alignment strength for color correction
+
+Key observations:
+- Lower-level VGG layers (conv1_1, conv2_1) produced more stable gradients
+- CFG values above ~3.5 introduced structural artifacts
+- PCA alignment reduced perceptual color drift by approximately 15–20%
+
+Metrics used during evaluation:
+- SSIM for perceptual similarity
+- ΔE2000 for color deviation
+- End-to-end inference time
+
+
 No deep technical knowledge needed — just follow the steps **in order**.
 
 ---
